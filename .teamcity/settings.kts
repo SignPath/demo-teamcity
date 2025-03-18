@@ -7,7 +7,7 @@ project {
 
   buildType {
     name = "Build and Sign"
-    id = "build_and_sign"
+    id("build_and_sign")
 
     vcs {
       root(DslContext.settingsRoot)
