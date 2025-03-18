@@ -17,6 +17,7 @@ project {
       // build step
       script {
         name = "Create HelloWorld.jar"
+        id = "build"
         scriptContent = "javac src/HelloWorld.java && jar cfe HelloWorld.jar HelloWorld -C src HelloWorld.class"
         formatStderrAsError = true
       }
