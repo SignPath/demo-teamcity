@@ -7,6 +7,7 @@ project {
 
   buildType {
     name = "Build and Sign"
+    id = "build_and_sign"
 
     vcs {
       root(DslContext.settingsRoot)
@@ -17,7 +18,6 @@ project {
       // build step
       script {
         name = "Create HelloWorld.jar"
-        id = "build"
         scriptContent = "javac src/HelloWorld.java && jar cfe HelloWorld.jar HelloWorld -C src HelloWorld.class"
         formatStderrAsError = true
       }
