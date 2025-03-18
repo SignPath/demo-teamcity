@@ -1,6 +1,5 @@
 import jetbrains.buildServer.configs.kotlin.*
-import jetbrains.buildServer.configs.kotlin.buildFeatures.commitStatusPublisher
-import jetbrains.buildServer.configs.kotlin.triggers.vcs
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 
 version = "2024.12"
 
@@ -18,7 +17,7 @@ project {
       // build step
       script {
         name = "Create HelloWorld.jar"
-        scriptContent = 'javac src/HelloWorld.java && jar cfe HelloWorld.jar HelloWorld -C src HelloWorld.class'
+        scriptContent = "javac src/HelloWorld.java && jar cfe HelloWorld.jar HelloWorld -C src HelloWorld.class"
         formatStderrAsError = true
       }
 
@@ -34,7 +33,7 @@ project {
 
         param("inputArtifactPath", "HelloWorld.jar")
         param("outputArtifactPath", "HelloWorld-signed.jar")
-        param("waitForCompletion", true)
+        param("waitForCompletion", "true")
       }
     }
 
