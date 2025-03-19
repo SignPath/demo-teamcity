@@ -14,6 +14,11 @@ project {
       cleanCheckout = true
     }
 
+    params {
+        param("SignPath.organizationId", "C:/Sources")
+        param("unix.destination.path", "/Users/Admin/Sources")
+    }
+
     steps {
       // build step
       script {
@@ -27,7 +32,7 @@ project {
         type = "SignPathRunner"
         param("connectorUrl", "https://teamcity-connector-stable.customersimulation.int.signpath.io")
         param("organizationId", "%SignPath.OrganizationId%")
-        param("apiToken", "%SignPath.ApiToken%")
+        param("apiToken", "credentialsJSON:17e30822-e4ce-4a6b-ad43-b85df692d573")
         param("projectSlug", "single-jar")
         param("signingPolicySlug", "test-signing")
         //param("artifactConfigurationSlug", "teamcity")
