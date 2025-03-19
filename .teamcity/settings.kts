@@ -26,7 +26,7 @@ project {
       step {
         type = "SignPathRunner"
         param("connectorUrl", "https://teamcity-connector-stable.customersimulation.int.signpath.io")
-        param("organizationId", "%SignPath.OrganizationId%")
+        param("organizationId", "9ff791fc-c563-44e3-ab8c-86a33c910bbe")
         param("apiToken", "credentialsJSON:a03ec855-c92c-4f33-8877-b8ab1726afd4")
         param("projectSlug", "single-jar")
         param("signingPolicySlug", "test-signing")
