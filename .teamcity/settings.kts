@@ -14,11 +14,6 @@ project {
       cleanCheckout = true
     }
 
-    params {
-        param("SignPath.organizationId", "C:/Sources")
-        param("unix.destination.path", "/Users/Admin/Sources")
-    }
-
     steps {
       // build step
       script {
