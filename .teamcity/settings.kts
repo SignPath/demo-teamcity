@@ -33,6 +33,7 @@ project {
         outputArtifactPath = "HelloWorld-signed.jar"
         waitForCompletion = true
       }
+    }
 
     // publish the signed artifact
     artifactRules = "HelloWorld-signed.jar"
