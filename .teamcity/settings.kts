@@ -23,20 +23,16 @@ project {
       }
 
       // sign step
-      step {
-        type = "SignPathRunner"
-        param("connectorUrl", "https://teamcity-connector-stable.customersimulation.int.signpath.io")
-        param("organizationId", "9ff791fc-c563-44e3-ab8c-86a33c910bbe")
-        param("apiToken", "credentialsJSON:a03ec855-c92c-4f33-8877-b8ab1726afd4")
-        param("projectSlug", "single-jar")
-        param("signingPolicySlug", "test-signing")
-        //param("artifactConfigurationSlug", "teamcity")
-
-        param("inputArtifactPath", "HelloWorld.jar")
-        param("outputArtifactPath", "HelloWorld-signed.jar")
-        param("waitForCompletion", "true")
+      signPathSubmitSigningRequest {
+        connectorUrl = "https://teamcity-connector-stable.customersimulation.int.signpath.io"     
+        organizationId = "%SignPath.OrganizationId%"
+        apiToken = "credentialsJSON:a03ec855-c92c-4f33-8877-b8ab1726afd4"
+        projectSlug = "single-jar"
+        signingPolicySlug = "test-signing"
+        inputArtifactPath = "HelloWorld.jar"
+        outputArtifactPath = "HelloWorld-signed.jar"
+        waitForCompletion = true
       }
-    }
 
     // publish the signed artifact
     artifactRules = "HelloWorld-signed.jar"
