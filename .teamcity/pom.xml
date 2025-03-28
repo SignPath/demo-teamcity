@@ -21,7 +21,7 @@
     </repository>
     <repository>
       <id>teamcity-server</id>
-      <url>https://teamcity.int.rubicon-it.com/app/dsl-plugins-repository</url>
+      <url>https://teamcity-stable.customersimulation.int.signpath.io/app/dsl-plugins-repository</url>
       <snapshots>
         <enabled>true</enabled>
       </snapshots>
