@@ -15,6 +15,8 @@ project {
       cleanCheckout = true
     }
 
+    // and here is a comment
+
     steps {
       // build step
       script {
