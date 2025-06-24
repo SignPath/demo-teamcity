@@ -15,8 +15,6 @@ project {
       cleanCheckout = true
     }
 
-    // random comment
-
     steps {
       // build step
       script {
