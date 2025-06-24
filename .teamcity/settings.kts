@@ -13,9 +13,6 @@ project {
     vcs {
       root(DslContext.settingsRoot)
       cleanCheckout = true
-      branchFilter = """
-        +:refs/tags/(*)
-      """.trimIndent()
     }
 
     steps {
