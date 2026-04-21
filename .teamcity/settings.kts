@@ -25,7 +25,7 @@ project {
 
       // sign step
       signPathSubmitSigningRequest {
-        connectorUrl = "https://teamcity-connector-stable.customersimulation.int.signpath.io"     
+        connectorUrl = "https://pipelineconnector-qa1.connectors.dev.signpath.io/TeamCity/pipeline-connector"     
         organizationId = "%SignPath.OrganizationId%"
         apiToken = "credentialsJSON:a03ec855-c92c-4f33-8877-b8ab1726afd4"
         projectSlug = "single-jar"
