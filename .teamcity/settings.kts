@@ -18,7 +18,7 @@ project {
           name = "Source Code Repo"
           url = (DslContext.settingsRoot as GitVcsRoot).url
           branch = (DslContext.settingsRoot as GitVcsRoot).branch
-      })
+      }))
       cleanCheckout = true
     }
 
