@@ -11,7 +11,13 @@ project {
     id("build_and_sign")
 
     vcs {
-      root(DslContext.settingsRoot)
+      // Note: Need to configure a dedicated VCS root (TODO: link issue)
+      // root(DslContext.settingsRoot)
+      root(GitVcsRoot({
+          name = "Source Code Repo"
+          url = DslContext.settingsRoot.url
+          branch = DslContext.settingsRoot.branch
+      })
       cleanCheckout = true
     }
 
