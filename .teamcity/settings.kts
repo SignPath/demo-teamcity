@@ -1,6 +1,7 @@
 import jetbrains.buildServer.configs.kotlin.*
 import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.buildSteps.signPathSubmitSigningRequest
+import jetbrains.buildServer.configs.kotlin.vcs.GitVcsRoot
 
 version = "2024.12"
 
